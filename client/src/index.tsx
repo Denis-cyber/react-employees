@@ -8,13 +8,15 @@ import { store } from "./app/store";
 import { Paths } from "./paths";
 import { Register } from "./pages/register";
 import { Login } from "./pages/login";
+import { Employees } from "./pages/employees";
 
 import "./index.css";
+import { Auth } from "./features/auth/auth";
 
 const router = createBrowserRouter([
   {
     path: Paths.home,
-    element: <h1>Employees</h1>,
+    element: <Employees />,
   },
   {
     path: Paths.login,
@@ -37,7 +39,9 @@ root.render(
           algorithm: theme.darkAlgorithm,
         }}
       >
-        <RouterProvider router={router} />
+        <Auth>
+          <RouterProvider router={router} />
+        </Auth>
       </ConfigProvider>
     </Provider>
   </React.StrictMode>
