@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Layout, Space, Typography } from "antd";
 import { LoginOutlined, TeamOutlined, UserOutlined } from "@ant-design/icons";
 import { Paths } from "../../paths";
-import { CustomButton } from "../custom-button";
+import { CustomButton } from "../customButton";
 
 import styles from "./index.module.css";
 
