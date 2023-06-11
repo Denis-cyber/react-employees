@@ -9,9 +9,11 @@ import { Paths } from "./paths";
 import { Register } from "./pages/register";
 import { Login } from "./pages/login";
 import { Employees } from "./pages/employees";
+import { AddEmployee } from "./pages/addEmployee";
 
 import "./index.css";
 import { Auth } from "./features/auth/auth";
+import { Status } from "./pages/status";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +27,14 @@ const router = createBrowserRouter([
   {
     path: Paths.register,
     element: <Register />,
+  },
+  {
+    path: Paths.employeeAdd,
+    element: <AddEmployee />,
+  },
+  {
+    path: `${Paths.status}/:status`,
+    element: <Status />,
   },
 ]);
 
