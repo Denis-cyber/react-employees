@@ -5,16 +5,17 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 import { ConfigProvider, theme } from "antd";
 import { store } from "./app/store";
+import { Auth } from "./features/auth/auth";
 import { Paths } from "./paths";
 import { Register } from "./pages/register";
 import { Login } from "./pages/login";
 import { Employees } from "./pages/employees";
 import { AddEmployee } from "./pages/addEmployee";
-
-import "./index.css";
-import { Auth } from "./features/auth/auth";
 import { Status } from "./pages/status";
 import { Employee } from "./pages/employee";
+import { EditEmployee } from "./pages/editEmployee";
+
+import "./index.css";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
   {
     path: `${Paths.employee}/:id`,
     element: <Employee />,
+  },
+  {
+    path: `${Paths.employeeEdit}/:id`,
+    element: <EditEmployee />,
   },
 ]);
 
